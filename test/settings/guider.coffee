@@ -1,11 +1,10 @@
-require '../../src/scripts/settings/guider'
 { expect } = require 'chai'
 coffee = require '../coffee_custom'
 path = require 'path'
 guider_path = path.join __dirname, '../../src/scripts/settings/guider'
 
-describe 'settings guider test', () ->
-  it 'should exit success and set tourist in global', () ->
+describe 'settings guider test', ->
+  it 'should exit success and set tourist in global', ->
     set_tourist_to_true = (val) ->
       expect val
         .to.be.an 'object'
@@ -19,7 +18,7 @@ describe 'settings guider test', () ->
       .expect 'code', 0
       .end()
 
-  it 'should exit success and set tourist to false', () ->
+  it 'should exit success and set tourist to false', ->
     set_tourist_to_false = (val) ->
       expect val
         .to.be.an 'object'
